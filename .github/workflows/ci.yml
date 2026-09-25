@@ -1,0 +1,13 @@
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Formula version
+        run: ./bump.sh --check
+      - name: Ruby syntax
+        run: ruby -c Formula/rl-lang.rb
