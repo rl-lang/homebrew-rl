@@ -18,6 +18,7 @@ Bump the version on release day:
 
 ```bash
 ./bump.sh 2.3.0
+./fetch-hashes.sh 2.3.0   # refreshes the tarball sha256
 ./bump.sh --check   # CI runs this
 ```
 

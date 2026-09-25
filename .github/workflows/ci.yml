@@ -11,3 +11,5 @@ jobs:
         run: ./bump.sh --check
       - name: Ruby syntax
         run: ruby -c Formula/rl-lang.rb
+      - name: Shell syntax
+        run: bash -n bump.sh && bash -n fetch-hashes.sh
